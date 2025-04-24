@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bon Appétit - Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: url('Restaurant.jpg') center/cover no-repeat;
+            height: 60vh;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Le Bon Appétit</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <div class="text-center text-white">
+                <h1 class="display-4">Bienvenue au Bon Appétit</h1>
+                <p class="lead">Cuisine française authentique</p>
+                <a href="#menu" class="btn btn-primary btn-lg">Voir notre menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Notre Menu</h2>
+            <div class="row g-4">
+                <!-- Menu Item 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="boeuf.jpg" class="card-img-top menu-img" alt="Plat 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bœuf Bourguignon</h5>
+                            <p class="card-text">Bœuf mijoté dans du vin rouge avec des champignons et des oignons.</p>
+                            <p class="fw-bold">16 398 CFA</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="ratatouille.jpg" class="card-img-top menu-img" alt="Plat 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Ratatouille</h5>
+                            <p class="card-text">Mélange de légumes provençaux cuits à l'huile d'olive.</p>
+                            <p class="fw-bold">11 807 CFA</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="canard.jpg" class="card-img-top menu-img" alt="Plat 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Confit de Canard</h5>
+                            <p class="card-text">Cuisse de canard confite servie avec des pommes de terre sautées.</p>
+                            <p class="fw-bold">14 430 CFA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="resto.jpg" alt="Restaurant" class="about-img">
+                </div>
+                <div class="col-md-6">
+                    <h2>À propos de nous</h2>
+                    <p>Fondé en 1995, Le Bon Appétit est un restaurant familial qui propose une cuisine française traditionnelle avec des ingrédients locaux et de saison. Notre chef, formé à Lyon, apporte son savoir-faire et sa passion pour créer des plats authentiques qui raviront vos papilles.</p>
+                    <p>Nous nous engageons à offrir une expérience culinaire exceptionnelle dans une atmosphère chaleureuse et accueillante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contactez-nous</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Le Bon Appétit. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
